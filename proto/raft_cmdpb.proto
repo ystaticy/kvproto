@@ -216,7 +216,8 @@ message CommitMergeRequest {
     repeated eraftpb.Entry entries = 3;
     // Used in v2. When it's present, `source` and `commit` will not be set.
     raft_serverpb.RegionLocalState source_state = 4;
-    bytes source_meta_info = 5;
+    // source_meta_info is used in cloud-storage-engine
+    bytes source_meta_info = 32;
 }
 
 message CommitMergeResponse {}

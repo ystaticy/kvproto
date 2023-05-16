@@ -15220,7 +15220,7 @@
                 "type": "raft_serverpb.RegionLocalState"
               },
               {
-                "id": 5,
+                "id": 32,
                 "name": "source_meta_info",
                 "type": "bytes"
               }
