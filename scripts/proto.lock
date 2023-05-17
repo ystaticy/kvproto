@@ -13796,6 +13796,21 @@
             ]
           },
           {
+            "name": "GetGCSafePointV2Response",
+            "fields": [
+              {
+                "id": 1,
+                "name": "header",
+                "type": "ResponseHeader"
+              },
+              {
+                "id": 2,
+                "name": "safe_point",
+                "type": "uint64"
+              }
+            ]
+          },
+          {
             "name": "WatchGCSafePointV2Request",
             "fields": [
               {
@@ -13862,6 +13877,21 @@
             ]
           },
           {
+            "name": "UpdateGCSafePointV2Response",
+            "fields": [
+              {
+                "id": 1,
+                "name": "header",
+                "type": "ResponseHeader"
+              },
+              {
+                "id": 2,
+                "name": "new_safe_point",
+                "type": "uint64"
+              }
+            ]
+          },
+          {
             "name": "UpdateServiceSafePointV2Request",
             "fields": [
               {
@@ -13888,6 +13918,31 @@
                 "id": 5,
                 "name": "ttl",
                 "type": "int64"
+              }
+            ]
+          },
+          {
+            "name": "UpdateServiceSafePointV2Response",
+            "fields": [
+              {
+                "id": 1,
+                "name": "header",
+                "type": "ResponseHeader"
+              },
+              {
+                "id": 2,
+                "name": "service_id",
+                "type": "bytes"
+              },
+              {
+                "id": 3,
+                "name": "TTL",
+                "type": "int64"
+              },
+              {
+                "id": 4,
+                "name": "min_safe_point",
+                "type": "uint64"
               }
             ]
           },
@@ -14548,7 +14603,7 @@
               {
                 "name": "GetGCSafePointV2",
                 "in_type": "GetGCSafePointV2Request",
-                "out_type": "GetGCSafePointResponse"
+                "out_type": "GetGCSafePointV2Response"
               },
               {
                 "name": "WatchGCSafePointV2",
@@ -14559,12 +14614,12 @@
               {
                 "name": "UpdateGCSafePointV2",
                 "in_type": "UpdateGCSafePointV2Request",
-                "out_type": "UpdateGCSafePointResponse"
+                "out_type": "UpdateGCSafePointV2Response"
               },
               {
                 "name": "UpdateServiceSafePointV2",
                 "in_type": "UpdateServiceSafePointV2Request",
-                "out_type": "UpdateServiceGCSafePointResponse"
+                "out_type": "UpdateServiceSafePointV2Response"
               },
               {
                 "name": "SyncRegions",

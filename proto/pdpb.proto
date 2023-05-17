@@ -839,6 +839,7 @@ message WatchGCSafePointV2Request {
     RequestHeader header = 1;
 }
 
+// SafePointEvent is for the rpc WatchGCSafePointV2.
 message SafePointEvent {
     uint32 keyspace_id = 1;
     uint64 safe_point = 2;
