@@ -383,6 +383,7 @@ message RaftCmdRequest {
     StatusRequest status_request = 4;
 
     reserved 5;
+    reserved 100 to 200;
 }
 
 message RaftCmdResponse {
