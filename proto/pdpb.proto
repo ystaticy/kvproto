@@ -883,7 +883,7 @@ message UpdateServiceSafePointV2Response {
     ResponseHeader header = 1;
 
     bytes service_id = 2;
-    int64 TTL = 3;
+    int64 ttl = 3;
     uint64 min_safe_point = 4;
 }
 
