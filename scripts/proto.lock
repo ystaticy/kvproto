@@ -14242,6 +14242,47 @@
             ]
           },
           {
+            "name": "GetAllGCSafePointV2Request",
+            "fields": [
+              {
+                "id": 1,
+                "name": "header",
+                "type": "RequestHeader"
+              }
+            ]
+          },
+          {
+            "name": "KeyspaceGCSafePoint",
+            "fields": [
+              {
+                "id": 1,
+                "name": "keyspace_id",
+                "type": "uint32"
+              },
+              {
+                "id": 2,
+                "name": "gc_safe_point",
+                "type": "uint64"
+              }
+            ]
+          },
+          {
+            "name": "GetAllGCSafePointV2Response",
+            "fields": [
+              {
+                "id": 1,
+                "name": "header",
+                "type": "ResponseHeader"
+              },
+              {
+                "id": 2,
+                "name": "gc_safe_point",
+                "type": "KeyspaceGCSafePoint",
+                "is_repeated": true
+              }
+            ]
+          },
+          {
             "name": "RegionStat",
             "fields": [
               {
