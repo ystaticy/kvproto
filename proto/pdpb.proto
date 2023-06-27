@@ -894,6 +894,20 @@ message UpdateServiceSafePointV2Response {
     uint64 min_safe_point = 4;
 }
 
+message GetAllGCSafePointV2Request {
+    RequestHeader header = 1;
+}
+
+message KeyspaceGCSafePoint {
+    uint32 keyspace_id = 1;
+    uint64 gc_safe_point = 2;
+}
+
+message GetAllGCSafePointV2Response {
+    ResponseHeader header = 1;
+    repeated KeyspaceGCSafePoint gc_safe_point = 2;
+}
+
 message RegionStat {
     // Bytes read/written during this period.
     uint64 bytes_written = 1;
