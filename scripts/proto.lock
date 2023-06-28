@@ -14252,7 +14252,7 @@
             ]
           },
           {
-            "name": "KeyspaceGCSafePoint",
+            "name": "GCSafePointV2",
             "fields": [
               {
                 "id": 1,
@@ -14277,7 +14277,7 @@
               {
                 "id": 2,
                 "name": "gc_safe_point",
-                "type": "KeyspaceGCSafePoint",
+                "type": "GCSafePointV2",
                 "is_repeated": true
               }
             ]
@@ -14981,6 +14981,11 @@
                 "name": "UpdateServiceSafePointV2",
                 "in_type": "UpdateServiceSafePointV2Request",
                 "out_type": "UpdateServiceSafePointV2Response"
+              },
+              {
+                "name": "GetAllGCSafePointV2",
+                "in_type": "GetAllGCSafePointV2Request",
+                "out_type": "GetAllGCSafePointV2Response"
               },
               {
                 "name": "SyncRegions",

@@ -87,6 +87,8 @@ service PD {
 
     rpc UpdateServiceSafePointV2(UpdateServiceSafePointV2Request) returns (UpdateServiceSafePointV2Response) {}
 
+    rpc GetAllGCSafePointV2(GetAllGCSafePointV2Request) returns (GetAllGCSafePointV2Response) {}
+
     rpc SyncRegions(stream SyncRegionRequest) returns (stream SyncRegionResponse) {}
 
     rpc GetOperator(GetOperatorRequest) returns (GetOperatorResponse) {}
@@ -898,14 +900,14 @@ message GetAllGCSafePointV2Request {
     RequestHeader header = 1;
 }
 
-message KeyspaceGCSafePoint {
+message GCSafePointV2 {
     uint32 keyspace_id = 1;
     uint64 gc_safe_point = 2;
 }
 
 message GetAllGCSafePointV2Response {
     ResponseHeader header = 1;
-    repeated KeyspaceGCSafePoint gc_safe_point = 2;
+    repeated GCSafePointV2 gc_safe_point = 2;
 }
 
 message RegionStat {
