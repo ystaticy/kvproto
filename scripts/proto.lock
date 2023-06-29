@@ -14279,6 +14279,11 @@
                 "name": "gc_safe_points",
                 "type": "GCSafePointV2",
                 "is_repeated": true
+              },
+              {
+                "id": 3,
+                "name": "revision",
+                "type": "int64"
               }
             ]
           },
