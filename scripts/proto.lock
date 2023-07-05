@@ -6151,6 +6151,11 @@
                 "id": 1,
                 "name": "mode",
                 "type": "SwitchMode"
+              },
+              {
+                "id": 2,
+                "name": "range",
+                "type": "Range"
               }
             ]
           },
@@ -18051,6 +18056,11 @@
                 "id": 6,
                 "name": "runaway_settings",
                 "type": "RunawaySettings"
+              },
+              {
+                "id": 7,
+                "name": "background_settings",
+                "type": "BackgroundSettings"
               }
             ]
           },
@@ -18171,6 +18181,17 @@
                 "id": 3,
                 "name": "watch",
                 "type": "RunawayWatch"
+              }
+            ]
+          },
+          {
+            "name": "BackgroundSettings",
+            "fields": [
+              {
+                "id": 1,
+                "name": "job_types",
+                "type": "string",
+                "is_repeated": true
               }
             ]
           }
