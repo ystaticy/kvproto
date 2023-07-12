@@ -20,6 +20,7 @@ service Keyspace {
   // Then, it returns responses containing keyspaces that had their metadata changed.
   rpc WatchKeyspaces (WatchKeyspacesRequest) returns (stream WatchKeyspacesResponse) {}
   rpc UpdateKeyspaceState(UpdateKeyspaceStateRequest) returns (UpdateKeyspaceStateResponse) {}
+  rpc GetAllKeyspaces(UpdateKeyspaceStateRequest) returns (UpdateKeyspaceStateResponse) {}
 }
 
 message KeyspaceMeta {
@@ -66,4 +67,13 @@ message UpdateKeyspaceStateRequest{
 message UpdateKeyspaceStateResponse{
   pdpb.ResponseHeader header = 1;
   KeyspaceMeta keyspace = 2;
+}
+
+message GetAllKeyspacesRequest{
+  pdpb.RequestHeader header = 1;
+}
+
+message GetAllKeyspacesResponse{
+  pdpb.ResponseHeader header = 1;
+  repeated KeyspaceMeta keyspaces = 2;
 }
