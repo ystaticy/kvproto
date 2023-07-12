@@ -7189,8 +7189,8 @@
               },
               {
                 "name": "GetAllKeyspaces",
-                "in_type": "UpdateKeyspaceStateRequest",
-                "out_type": "UpdateKeyspaceStateResponse"
+                "in_type": "GetAllKeyspacesRequest",
+                "out_type": "GetAllKeyspacesResponse"
               }
             ]
           }

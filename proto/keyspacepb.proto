@@ -20,7 +20,7 @@ service Keyspace {
   // Then, it returns responses containing keyspaces that had their metadata changed.
   rpc WatchKeyspaces (WatchKeyspacesRequest) returns (stream WatchKeyspacesResponse) {}
   rpc UpdateKeyspaceState(UpdateKeyspaceStateRequest) returns (UpdateKeyspaceStateResponse) {}
-  rpc GetAllKeyspaces(UpdateKeyspaceStateRequest) returns (UpdateKeyspaceStateResponse) {}
+  rpc GetAllKeyspaces(GetAllKeyspacesRequest) returns (GetAllKeyspacesResponse) {}
 }
 
 message KeyspaceMeta {
