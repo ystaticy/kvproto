@@ -72,7 +72,7 @@ message UpdateKeyspaceStateResponse{
 message GetAllKeyspacesRequest{
   pdpb.RequestHeader header = 1;
   uint32 start_id = 2;
-  int32 limit = 3;
+  uint32 limit = 3;
 }
 
 message GetAllKeyspacesResponse{

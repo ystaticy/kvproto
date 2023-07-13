@@ -7156,7 +7156,7 @@
               {
                 "id": 3,
                 "name": "limit",
-                "type": "int32"
+                "type": "uint32"
               }
             ]
           },
