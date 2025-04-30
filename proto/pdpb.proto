@@ -796,6 +796,7 @@ message PeerReport {
 message StoreReport {
     repeated PeerReport peer_reports = 1;
     uint64 step = 2;
+    repeated uint32 destroyed_keyspace_ids = 3;
 }
 
 message StoreHeartbeatRequest {
@@ -869,6 +870,10 @@ message StoreHeartbeatResponse {
     ControlGrpc control_grpc = 7;
     // NodeState is going to mark the state of the store.
     metapb.NodeState state = 8;
+    // Used to clean up archived keyspace ranges.
+    repeated uint32 archived_keyspace_ids = 9;
+    // Used to clean up archived keyspace ranges.
+    repeated uint32 tombstone_keyspace_ids = 10;
 }
 
 message ScatterRegionRequest {

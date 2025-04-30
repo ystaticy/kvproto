@@ -16064,6 +16064,12 @@
                 "id": 2,
                 "name": "step",
                 "type": "uint64"
+              },
+              {
+                "id": 3,
+                "name": "destroyed_keyspace_ids",
+                "type": "uint32",
+                "is_repeated": true
               }
             ]
           },
@@ -16239,6 +16245,18 @@
                 "id": 8,
                 "name": "state",
                 "type": "metapb.NodeState"
+              },
+              {
+                "id": 9,
+                "name": "archived_keyspace_ids",
+                "type": "uint32",
+                "is_repeated": true
+              },
+              {
+                "id": 10,
+                "name": "tombstone_keyspace_ids",
+                "type": "uint32",
+                "is_repeated": true
               }
             ]
           },
